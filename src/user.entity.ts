@@ -1,5 +1,5 @@
 import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
-
+//Entity User For Authentification
 @Entity('users')
 export class User {
     @PrimaryGeneratedColumn()
