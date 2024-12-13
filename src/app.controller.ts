@@ -12,7 +12,7 @@ export class AppController {
     ) {
     }
 
-    @Post('register')
+    @Post('add')
     async register(
         @Body('name') name: string,
         @Body('email') email: string,
@@ -31,7 +31,7 @@ export class AppController {
         return user;
     }
 
-    @Post('login')
+    @Post('sign')
     async login(
         @Body('email') email: string,
         @Body('password') password: string,
@@ -77,7 +77,7 @@ export class AppController {
         }
     }
 
-    @Post('logout')
+    @Post('signout')
     async logout(@Res({passthrough: true}) response: Response) {
         response.clearCookie('jwt');
 
